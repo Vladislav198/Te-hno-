@@ -6,6 +6,7 @@
     <meta name="description" content="Магазин комп'ютерної техніки та аксесуарів">
     <title>Магазин комп'ютерної техніки TechnoMax</title>
     <style>
+      
         /* Глобальні стилі */
         body {
             font-family: Arial, sans-serif;
@@ -42,7 +43,7 @@
         /* Банер */
         .banner {
             background: url('https://source.unsplash.com/1920x600/?technology,computers') no-repeat center center/cover;
-            color: white;
+            color: rgb(21, 21, 21);
             text-align: center;
             padding: 60px 20px;
             margin-bottom: 20px;
@@ -110,89 +111,90 @@
             padding: 10px;
             margin-top: 20px;
         }
+    
+        
     </style>
 </head>
 <body>
     <!-- Шапка сайту -->
     <header>
-        <h1>TechnoMax</h1>
+        <h1 data-lang-key="title">TechnoMax</h1>
         <nav>
-            <a href="#home">Головна</a>
-            <a href="#products">Продукція</a>
-            <a href="#about">Про нас</a>
-            <a href="#contact">Контакти</a>
+            <a href="#home" data-lang-key="home">Головна</a>
+            <a href="#products" data-lang-key="products">Продукція</a>
+            <a href="#about" data-lang-key="about">Про нас</a>
+            <a href="#contact" data-lang-key="contact">Контакти</a>
+            <select class="language-select" id="language-select">
+                <option value="uk">Українська</option>
+                <option value="en">English</option>
+            </select>
         </nav>
+        
     </header>
     <!-- Банер -->
     <section id="home" class="banner">
-        
-        <h2 style="color: gray;">Вибір комп'ютерної техніки за доступними цінами!</h2>
-        <p style="color: gray;">У нашому магазині ви знайдете найкраще обладнання для роботи та розваг.</p>
+        <h2 data-lang-key="bannerTitle">Вибір комп'ютерної техніки за доступними цінами!</h2>
+        <p data-lang-key="bannerText">У нашому магазині ви знайдете найкраще обладнання для роботи та розваг.</p>
     </section>
     <!-- Продукти -->
     <section id="products" class="products">
         <div class="product">
             <img src="https://cdn.comfy.ua/media/x/img3/2769106/img5.jpg" alt="Ноутбук Acer">
-            <h3>Ноутбук Acer "Predator Helios" </h3>
-            <p>Потужний ноутбук для роботи та розваг.</p>
-            <p class="price">Ціна: 17,999 грн</p>
-            <button onclick="alert('Дякуємо за покупку!')">Купити</button>
+            <h3 data-lang-key="product1Ttitle">Ноутбук Acer "Predator Helios"</h3>
+            <p data-lang-key="product1Desc">Потужний ноутбук для роботи та розваг.</p>
+            <p data-lang-key="product1Money"  class="price">Ціна: 17,999 грн</p>
+            <button data-lang-key="buyBtn" onclick="alert('Дякуємо за покупку!')">Купити</button>
         </div>
         <div class="product">
             <img src="https://cloudfresh.com/wp-content/uploads/2022/06/hp-chromebase-all-in-one-desktop.png" alt="Настільний комп'ютер HP">
-            <h3>Настільний комп'ютер HP</h3>
-            <p>Ідеальний комп'ютер для офісної роботи.</p>
-            <p class="price">Ціна: 11,500 грн</p>
-            <button onclick="alert('Дякуємо за покупку!')">Купити</button>
+            <h3  data-lang-key="product2Title">Настільний комп'ютер HP</h3>
+            <p data-lang-key="product2Desc">Ідеальний комп'ютер для офісної роботи.</p>
+            <p data-lang-key="product2Money"  class="price">Ціна: 11,500 грн</p>
+            <button data-lang-key="buyBtn" onclick="alert('Дякуємо за покупку!')">Купити</button>
         </div>
         <div class="product">
             <img src="https://www.3ona51.com/images/news/20231113/02.jpg" alt="Механічна клавіатура">
-            <h3>Механічна клавіатура геймерська</h3>
-            <p>Професійна клавіатура для справжніх геймерів.</p>
-            <p class="price">Ціна: 2,000 грн</p>
-            <button onclick="alert('Дякуємо за покупку!')">Купити</button>
+            <h3  data-lang-key="product3Title">Механічна клавіатура геймерська</h3>
+            <p data-lang-key="product3Desc">Професійна клавіатура для справжніх геймерів.</p>
+            <p data-lang-key="product3Money" class="price">Ціна: 2,000 грн</p>
+            <button  data-lang-key="buyBtn" onclick="alert('Дякуємо за покупку!')">Купити</button>
         </div>
         <div class="product">
             <img src="https://vdomamarket.com/content/images/15/480x274l50nn0/planshet-samsung-galaxy-tab-10.1-6-64-pro-74863234449096.jpg" alt="Планшет Samsung">
-            <h3>Планшет Samsung</h3>
-            <p>Зручний планшет для домашнього користування.</p>
-            <p class="price">Ціна: 9,999 грн</p>
-            <button onclick="alert('Дякуємо за покупку!')">Купити</button>
+            <h3  data-lang-key="product4Title">Планшет Samsung</h3>
+            <p data-lang-key="product4Desc">Зручний планшет для домашнього користування.</p>
+            <p data-lang-key="product4Money" class="price">Ціна: 9,999 грн</p>
+            <button data-lang-key="buyBtn" onclick="alert('Дякуємо за покупку!')">Купити</button>
         </div>
+    </section>
+        <!-- Інші продукти тут аналогічно -->
     </section>
     <section id="about" style="background: #f9f9f9; padding: 40px 20px; text-align: center;">
         <div class="container">
-            <h2 style="font-size: 2.5rem; color: #333;">Про TechnoMax</h2>
-            <p style="font-size: 1.2rem; margin-top: 10px; color: #666;">
+            <h2 data-lang-key="aboutTechno" style="font-size: 2.5rem; color: #333;">Про TechnoMax</h2>
+            <p data-lang-key="about1Techno" style="font-size: 1.2rem; margin-top: 10px; color: #666;">
                 TechnoMax — це не просто магазин, а місце, де технології стають доступними для кожного. Ми працюємо, щоб зробити ваш досвід покупки максимально комфортним і вигідним.
             </p>
-            <p style="font-size: 1.2rem; margin-top: 10px; color: #666;">
+            <p data-lang-key="about2Techno" style="font-size: 1.2rem; margin-top: 10px; color: #666;">
                 Наша команда експертів завжди готова допомогти вам обрати найкраще рішення для роботи, навчання чи розваг.
             </p>
-            <p style="font-size: 1.2rem; margin-top: 10px; color: #666;">
+            <p data-lang-key="about3Techno" style="font-size: 1.2rem; margin-top: 10px; color: #666;">
                 Чому обирають нас?
             </p>
             <ul style="list-style: none; padding: 0; font-size: 1.2rem; color: #333;">
-                <li>✔ Великий вибір продукції</li>
-                <li>✔ Гарантія якості</li>
-                <li>✔ Доступні ціни</li>
-                <li>✔ Професійна підтримка</li>
+                <li data-lang-key="list1">✔ Великий вибір продукції</li>
+                <li data-lang-key="list2">✔ Гарантія якості</li>
+                <li data-lang-key="list3">✔ Доступні ціни</li>
+                <li data-lang-key="list4">✔ Професійна підтримка</li>
             </ul>
         </div>
     </section>
     <!-- Футер -->
     <footer>
-        <p>&copy; 2024 TechnoMax. Усі права захищені.</p>
-        <p>Email: v.vladislav@gmail.com | Телефон: +380 685 136 277</p>
+        <p data-lang-key="rights">&copy; 2024 TechnoMax. Усі права захищені.</p>
+        <p data-lang-key="email">Email: v.vladislav@gmail.com | Телефон: +380 685 136 277</p>
     </footer>
     <!-- Footer Section -->
-  
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
