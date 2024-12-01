@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./detalistStyle.css"/>
+     
+     
+     
+    
+</head>
+<body>
+    <div id="clotrer-details">
+        Loading......
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function ()  {
+        const params = new URLSearchParams(Window.location.search);
+        const cardId = params.get("id");
+        const cardDetailsContainer = document.getElementById("clother-details");
+        const cardData = {
+            laptop: {
+                title: "Ноутбук Acer",
+                description:
+                  "Ноутбуки серії Acer Predator створені спеціально для геймерів та професіоналів, які шукають потужність, продуктивність і сучасний дизайн."
+                images: [
+                    "https://cdn.comfy.ua/media/x/img3/2769106/img5.jpg",
+                ],
+                price: "17,999",
+            },
+            laptopHP: {
+                title: "Настільний комп'ютер HP",
+                description:
+                "Настільні комп'ютери HP є універсальними пристроями, які відповідають потребам різних користувачів — від студентів і офісних працівників до дизайнерів і геймерів."
+               images: [
+                "https://cloudfresh.com/wp-content/uploads/2022/06/hp-chromebase-all-in-one-desktop.png",
+               ],
+            price: "11,500",
+        },
+        keyboard: {
+            title: "Механічна клавіатура",
+            description:
+             "Механічна клавіатура — це тип клавіатури, де кожна клавіша працює на основі індивідуального механічного перемикача. Це забезпечує точний і приємний відгук, а також довговічність у порівнянні з мембранними клавіатурами."
+        images: [
+            "https://www.3ona51.com/images/news/20231113/02.jpg",
+        ],
+            price: "2,000",
+        },
+        tablet: {
+            title: "Планшет Samsung",
+            description:
+            "Планшети Samsung — це багатофункціональні пристрої, які підходять як для роботи, так і для розваг. Вони відомі своєю високою якістю, елегантним дизайном та інноваційними функціями. Серія планшетів від Samsung включає різні моделі, які задовольняють потреби користувачів з різними бюджетами та цілями."
+        images: [
+            "https://vdomamarket.com/content/images/15/480x274l50nn0/planshet-samsung-galaxy-tab-10.1-6-64-pro-74863234449096.jpg"
+        ],
+        price: "9,999"
+        },
+    
+     };
+    
+     if (cardData[cardId]) {
+        const card = cardData[cardId];
+        cardDetailsContainer.innerHTML = `
+        <!-- Шапка сайту -->
+          <header>
+        <h1 data-lang-key="title">TechnoMax</h1>
+        <nav>
+            <a href="#home" data-lang-key="home">Головна</a>
+            <a href="#products" data-lang-key="products">Продукція</a>
+            <a href="#about" data-lang-key="about">Про нас</a>
+            <a href="#contact" data-lang-key="contact">Контакти</a>
+            <select class="language-select" id="language-select">
+                <option value="uk">Українська</option>
+                <option value="en">English</option>
+            </select>
+        </nav>
+    }
+
+     <!-- Футер -->
+    <footer>
+        <p data-lang-key="rights">&copy; 2024 TechnoMax. Усі права захищені.</p>
+        <p data-lang-key="email">Email: v.vladislav@gmail.com | Телефон: +380 685 136 277</p>
+    </footer>
+        `}else{
+            cardDetailsContainer.innerHTML=`<h1>Товар не знайдений </h1>`
+        }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
