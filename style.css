@@ -1,0 +1,49 @@
+.night-theme{
+    position:fixed;
+    border: none;
+    border-radius: 8px;
+    outline:none;
+    width: 45px;
+    height: 70px;
+    right: 15px;
+    top:15px;
+    background-color:rgba(rgb(17, 114, 206));
+    
+    transition: background-color .4s;
+    cursor:pointer;
+}
+
+
+.night-theme-icon{
+    position:absolute;
+    width:40px;
+    height:40px;
+    opacity:0;
+    transition: opacity .4s ;
+}
+body.night-theme .night-theme-icon-moon{
+    position:absolute;
+   opacity:0;
+    top:15px;
+    right:12px;
+    
+   
+}
+body{
+    transition: background-color .4s ;
+}
+body.night{
+background-color: black;
+color:white;
+}
+body.night-theme .night-theme-icon-sun{
+   
+    opacity:1;
+     
+     
+    
+ }
+ .footer.night{
+    background-color: black;
+color:white;
+ }

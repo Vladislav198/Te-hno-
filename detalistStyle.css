@@ -1,0 +1,25 @@
+.main{
+    padding: 200px 0;
+    margin: 0 auto;
+    width: 70%;
+}
+.card {
+    display: flex;
+    gap: 20px;
+
+}
+.images-container {
+    display: flex;
+    gap: 20px;
+}
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.small-images img {
+    width: 150px;
+    
+}

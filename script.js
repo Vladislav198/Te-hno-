@@ -82,3 +82,7 @@ document.getElementById('language-select').addEventListener('change', function()
         el.innerText = translations[lang][key];
     });
 });
+const nightTheme=document.getElementById("night-theme")
+nightTheme.addEventListener("click", function(){
+    document.body.classList.toggle("night")
+})
